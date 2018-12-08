@@ -19,7 +19,7 @@ versions
 --------
 
 The current patch has been created for kernel 4.14.12. At the time of this writing it can
-be applied to both the latest stable (4.17.4) and longterm (4.14.53) kernel.
+be applied to both the latest stable (4.19.7) and longterm (4.14.86) kernel.
 
 If you get rejects when applying this patch to the latest kernel please open an issue and
 I'll try to update it.
@@ -34,6 +34,8 @@ Copyright 2014-2017 by Open Source Security, Inc.,
 Brad Spengler <spender@grsecurity.net>
 and PaX Team <pageexec@freemail.hu>
 
+
+Forked from:
 The only thing I did is extract the patch out of the larger grsecurity patchset.
 
 Hanno Böck, https://hboeck.de/
