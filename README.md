@@ -18,8 +18,8 @@ Background:
 versions
 --------
 
-The current patch has been created for kernel 4.14.12. At the time of this writing it can
-be applied to both the latest stable (4.19.7) and longterm (4.14.86) kernel.
+The current patch has been created for kernel 4.20.4. At the time of this writing it can
+be applied to both the latest stable (4.20.4) and longterm (4.19.17) kernel.
 
 If you get rejects when applying this patch to the latest kernel please open an issue and
 I'll try to update it.
