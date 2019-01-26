@@ -34,9 +34,10 @@ Copyright 2014-2017 by Open Source Security, Inc.,
 Brad Spengler <spender@grsecurity.net>
 and PaX Team <pageexec@freemail.hu>
 
-
 Forked from:
 
 The only thing I did is extract the patch out of the larger grsecurity patchset.
 
 Hanno Böck, https://hboeck.de/
+
+Josh King, https://joshuaking.org
