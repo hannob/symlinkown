@@ -1,0 +1,36 @@
+#!/bin/bash
+
+if [[ "$(whoami)" != "root" ]]; then
+	echo Must run as root.
+	exit 1
+fi
+
+if [[ -z "$1" ]]; then
+	echo Test with any valid user on this system:
+	echo "$0 [username]"
+	exit 1
+fi
+USER=$1
+TARGETUSER=apache
+
+echo Testing symlinkown kernel feature.
+echo You should see a \"Permission denied\" error with symlinkown enabled and
+echo the secret \"verysecret\" with symlinkown disabled.
+echo
+
+TMP=$(mktemp -d)
+chmod 755 "$TMP"
+
+mkdir -m 700 "$TMP/adir"
+mkdir -m 700 "$TMP/udir"
+
+echo verysecret > "$TMP/adir/secret.txt"
+
+ln -s "$TMP/adir/secret.txt" "$TMP/udir/secret.txt"
+chown -R "$USER" "$TMP/udir"
+
+setfacl -R -m "u:$TARGETUSER:rX" "$TMP/adir" "$TMP/udir"
+
+sudo -u "$TARGETUSER" cat "$TMP/udir/secret.txt"
+
+rm -rf "$TMP"
