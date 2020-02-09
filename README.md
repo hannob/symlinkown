@@ -15,12 +15,7 @@ Background:
 * https://blog.hboeck.de/archives/873-The-tricky-security-issue-with-FollowSymLinks-and-Apache.html
 * https://securityaffairs.co/wordpress/55990/deep-web/freedom-hosting-ii-hack.html
 
-versions
---------
-
-The current patch has been created for kernel 5.3.11.
-
-If you get rejects when applying this patch to the latest kernel please open an issue and
+If you get rejects when applying the latest patch to the latest upstream kernel please open an issue and
 I'll try to update it.
 
 source and copyright
