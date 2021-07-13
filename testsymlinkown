@@ -24,7 +24,7 @@ chmod 755 "$TMP"
 mkdir -m 700 "$TMP/adir"
 mkdir -m 700 "$TMP/udir"
 
-echo verysecret > "$TMP/adir/secret.txt"
+echo verysecret >"$TMP/adir/secret.txt"
 
 ln -s "$TMP/adir/secret.txt" "$TMP/udir/secret.txt"
 chown -R "$USER" "$TMP/udir"
