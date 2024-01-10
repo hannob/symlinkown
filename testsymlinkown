@@ -13,6 +13,8 @@ fi
 USER=$1
 TARGETUSER=apache
 
+LC_ALL=C
+
 echo Testing symlinkown kernel feature.
 echo You should see a \"Permission denied\" error with symlinkown enabled and
 echo the secret \"verysecret\" with symlinkown disabled.
