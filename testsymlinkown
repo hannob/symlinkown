@@ -20,6 +20,7 @@ echo You should see a \"Permission denied\" error with symlinkown enabled and
 echo the secret \"verysecret\" with symlinkown disabled.
 echo
 
+export TMPDIR=/tmp
 TMP=$(mktemp -d)
 chmod 755 "$TMP"
 
